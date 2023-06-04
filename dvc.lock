@@ -1,0 +1,12 @@
+schema: '2.0'
+stages:
+  train@1:
+    cmd: echo "--model lightgbm --num_leaves 31 --cross_varidation.folds 4" "31" "lightgbm"
+  train@0:
+    cmd: echo "--model lightgbm --num_leaves 63 --cross_varidation.folds 5" "63" "lightgbm"
+  train@param1:
+    cmd: echo key=["param1"] item=["--model lightgbm --num_leaves 63 --cross_varidation.folds
+      5"]  item.num_leaves=["63"] item.model=["lightgbm"] item.cross_varidation.folds=["5"]
+  train@param2:
+    cmd: echo key=["param2"] item=["--model lightgbm --num_leaves 31 --cross_varidation.folds
+      4"]  item.num_leaves=["31"] item.model=["lightgbm"] item.cross_varidation.folds=["4"]
