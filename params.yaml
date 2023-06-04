@@ -1,0 +1,11 @@
+train_params:
+  param1:
+    model: "lightgbm"
+    num_leaves: 63
+    cross_varidation:
+      folds: 5
+  param2:
+    model: "lightgbm"
+    num_leaves: 31
+    cross_varidation:
+      folds: 4

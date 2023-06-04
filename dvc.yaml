@@ -1,0 +1,11 @@
+stages:
+  train:
+    foreach: ${train_params}  # from params.yaml
+    do:
+      cmd: >-
+        echo
+        key=["${key}"]
+        item=["${item}"] 
+        item.num_leaves=["${item.num_leaves}"]
+        item.model=["${item.model}"]
+        item.cross_varidation.folds=["${item.cross_varidation.folds}"]
